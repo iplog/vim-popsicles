@@ -45,13 +45,13 @@
 " let s:gui07 = #f5f5f5 -> 15                                   |
 "                                                               |
 " let s:gui08 = #ff5f5f -> 203                                  |
-" let s:gui09 = #96cbfe -> 117                                  |
-" let s:gui0A = #00d7ff -> 45                                   |
-" let s:gui0B = #ffd204 -> 220                                  |
-" let s:gui0C = #12cfc0 -> 43                                   |
-" let s:gui0D = #6fc2ef -> 75                                   |
-" let s:gui0E = #ff73fd -> 213                                  |
-" let s:gui0F = #e1a3ee -> 183                                  |
+" let s:gui09 = #01a0e4 -> 38                                   |
+" let s:gui0A = #0080fb -> 33                                   |
+" let s:gui0B = #fefb67 -> 227                                  |
+" let s:gui0C = #4fdd56 -> 77                                   |
+" let s:gui0D = #96cbfe -> 117                                  |
+" let s:gui0E = #e474e4 -> 176                                  |
+" let s:gui0F = #ff73fd -> 213                                  |
 "                                                               |
 "================================================================
 
@@ -76,13 +76,13 @@ let s:gui05 = "d0d0d0"
 let s:gui06 = "e0e0e0"
 let s:gui07 = "f5f5f5"
 let s:gui08 = "ff5f5f"
-let s:gui09 = "96cbfe"
-let s:gui0A = "00d7ff"
-let s:gui0B = "ffd204"
-let s:gui0C = "12cfc0"
-let s:gui0D = "6fc2ef"
-let s:gui0E = "ff73fd"
-let s:gui0F = "e1a3ee"
+let s:gui09 = "01a0e4"
+let s:gui0A = "0080fb"
+let s:gui0B = "fefb67"
+let s:gui0C = "4fdd56"
+let s:gui0D = "96cbfe"
+let s:gui0E = "e474e4"
+let s:gui0F = "ff73fd"
 
 "----------------------------------------------------------------
 " Terminal color definitions                                    |
@@ -96,13 +96,13 @@ let s:cterm05 = "252"
 let s:cterm06 = "254"
 let s:cterm07 = "15"
 let s:cterm08 = "203"
-let s:cterm09 = "117"
-let s:cterm0A = "45"
-let s:cterm0B = "220"
-let s:cterm0C = "43"
-let s:cterm0D = "75"
-let s:cterm0E = "213"
-let s:cterm0F = "183"
+let s:cterm09 = "33"
+let s:cterm0A = "38"
+let s:cterm0B = "227"
+let s:cterm0C = "77"
+let s:cterm0D = "117"
+let s:cterm0E = "176"
+let s:cterm0F = "213"
 
 "----------------------------------------------------------------
 " highlighting function                                         |
