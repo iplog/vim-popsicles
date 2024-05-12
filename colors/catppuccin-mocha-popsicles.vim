@@ -8,7 +8,7 @@
 "
 " Author: Nicolas Blanchot <nicolasblanchot@gmail.com>
 " Maintainer: Nicolas Blanchot <nicolasblanchot@gmail.com>
-" Notes:  My really pop theme
+" Notes:  My version of catppuccin mocha
 "
 "     Widely inspired by the gummybears vim scheme by
 "       Jose Elera Campana - https://github.com/jelera
@@ -35,23 +35,23 @@
 "================================================================
 " Colors used                                                   |
 "                                                               |
-" let s:gui00 = #000000 -> 0                                    |
-" let s:gui01 = #202020 -> 234                                  |
-" let s:gui02 = #303030 -> 236                                  |
-" let s:gui03 = #505050 -> 240                                  |
-" let s:gui04 = #b0b0b0 -> 249                                  |
-" let s:gui05 = #d0d0d0 -> 252                                  |
-" let s:gui06 = #e0e0e0 -> 254                                  |
-" let s:gui07 = #f5f5f5 -> 15                                   |
+" let s:gui00 = #1e1e2e -> 235 # base                           |
+" let s:gui01 = #181825 -> 233 # mantle                         |
+" let s:gui02 = #313244 -> 237 # surface0                       |
+" let s:gui03 = #45475a -> 59 # surface1                        |
+" let s:gui04 = #585b70 -> 60 # surface2                        |
+" let s:gui05 = #cdd6f4 -> 189 # text                           |
+" let s:gui06 = #f5e0dc -> 224 # rosewater                      |
+" let s:gui07 = #b4befe -> 147 # lavender                       |
 "                                                               |
-" let s:gui08 = #ff5f5f -> 203                                  |
-" let s:gui09 = #01a0e4 -> 38                                   |
-" let s:gui0A = #0080fb -> 33                                   |
-" let s:gui0B = #fefb67 -> 227                                  |
-" let s:gui0C = #4fdd56 -> 77                                   |
-" let s:gui0D = #96cbfe -> 117                                  |
-" let s:gui0E = #e474e4 -> 176                                  |
-" let s:gui0F = #ff73fd -> 213                                  |
+" let s:gui08 = #f38ba8 -> 211 # red                            |
+" let s:gui09 = #fab387 -> 216 # peach                          |
+" let s:gui0A = #f9e2af -> 233 # yellow                         |
+" let s:gui0B = #a6e3a1 -> 151 # green                          |
+" let s:gui0C = #94e2d5 -> 116 # teal                           |
+" let s:gui0D = #89b4fa -> 111 # blue                           |
+" let s:gui0E = #cba6f7 -> 183 # mauve                          |
+" let s:gui0F = #f2cdcd -> 224 # flamingo                       |
 "                                                               |
 "================================================================
 
@@ -62,69 +62,91 @@ highlight clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name="popsicles"
+let colors_name="catppuccin-mocha-popsicles"
 
 "----------------------------------------------------------------
 " GUI color definitions                                         |
 "----------------------------------------------------------------
-let s:gui00 = "000000"
-let s:gui01 = "202020"
-let s:gui02 = "303030"
-let s:gui03 = "505050"
-let s:gui04 = "b0b0b0"
-let s:gui05 = "d0d0d0"
-let s:gui06 = "e0e0e0"
-let s:gui07 = "f5f5f5"
-let s:gui08 = "ff5f5f"
-let s:gui09 = "01a0e4"
-let s:gui0A = "0080fb"
-let s:gui0B = "fefb67"
-let s:gui0C = "4fdd56"
-let s:gui0D = "96cbfe"
-let s:gui0E = "e474e4"
-let s:gui0F = "ff73fd"
+let s:gui00 = "1e1e2e"
+let s:gui01 = "181825"
+let s:gui02 = "313244"
+let s:gui03 = "45475a"
+let s:gui04 = "585b70"
+let s:gui05 = "cdd6f4"
+let s:gui06 = "f5e0dc"
+let s:gui07 = "b4befe"
+let s:gui08 = "f38ba8"
+let s:gui09 = "fab387"
+let s:gui0A = "f9e2af"
+let s:gui0B = "a6e3a1"
+let s:gui0C = "94e2d5"
+let s:gui0D = "89b4fa"
+let s:gui0E = "cba6f7"
+let s:gui0F = "f2cdcd"
 
 "----------------------------------------------------------------
 " Terminal color definitions                                    |
 "----------------------------------------------------------------
-let s:cterm00 = "0"
-let s:cterm01 = "234"
-let s:cterm02 = "236"
-let s:cterm03 = "240"
-let s:cterm04 = "249"
-let s:cterm05 = "252"
-let s:cterm06 = "254"
-let s:cterm07 = "15"
-let s:cterm08 = "203"
-let s:cterm09 = "33"
-let s:cterm0A = "38"
-let s:cterm0B = "227"
-let s:cterm0C = "77"
-let s:cterm0D = "117"
-let s:cterm0E = "176"
-let s:cterm0F = "213"
+let s:cterm00 =  "235"
+let s:cterm01 =  "233"
+let s:cterm02 =  "237"
+let s:cterm03 =  "59"
+let s:cterm04 =  "60"
+let s:cterm05 =  "189"
+let s:cterm06 =  "224"
+let s:cterm07 =  "147"
+let s:cterm08 =  "211"
+let s:cterm09 =  "216"
+let s:cterm0A =  "233"
+let s:cterm0B =  "151"
+let s:cterm0C =  "116"
+let s:cterm0D =  "111"
+let s:cterm0E =  "183"
+let s:cterm0F =  "224"
 
-
-" vim only. (would `let g:terminal_color_0 =` for nvin
-let g:terminal_ansi_colors = [
-\ '#000000',
-\ '#202020',
-\ '#303030',
-\ '#505050',
-\ '#b0b0b0',
-\ '#d0d0d0',
-\ '#e0e0e0',
-\ '#f5f5f5',
-\ '#ff5f5f',
-\ '#01a0e4',
-\ '#0080fb',
-\ '#fefb67',
-\ '#4fdd56',
-\ '#96cbfe',
-\ '#e474e4',
-\ '#ff73fd',
-\ ]
-" endif
+if has("nvim")
+  let g:terminal_color_0 =  "#45475A"
+  let g:terminal_color_1 =  "#F38BA8"
+  let g:terminal_color_2 =  "#A6E3A1"
+  let g:terminal_color_3 =  "#F9E2AF"
+  let g:terminal_color_4 =  "#89B4FA"
+  let g:terminal_color_5 =  "#F5C2E7"
+  let g:terminal_color_6 =  "#94E2D5"
+  let g:terminal_color_7 =  "#BAC2DE"
+  let g:terminal_color_8 =  "#585B70"
+  let g:terminal_color_9 =  "#F38BA8"
+  let g:terminal_color_10 = "#A6E3A1"
+  let g:terminal_color_11 = "#F9E2AF"
+  let g:terminal_color_12 = "#89B4FA"
+  let g:terminal_color_13 = "#F5C2E7"
+  let g:terminal_color_14 = "#94E2D5"
+  let g:terminal_color_15 = "#A6ADC8"
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_5
+  if &background == "light"
+    let g:terminal_color_background = g:terminal_color_7
+    let g:terminal_color_foreground = g:terminal_color_2
+  endif
+elseif has('terminal')
+  let g:terminal_ansi_colors = [
+        \ "#45475A",
+        \ "#F38BA8",
+        \ "#A6E3A1",
+        \ "#F9E2AF",
+        \ "#89B4FA",
+        \ "#F5C2E7",
+        \ "#94E2D5",
+        \ "#BAC2DE",
+        \ "#585B70",
+        \ "#F38BA8",
+        \ "#A6E3A1",
+        \ "#F9E2AF",
+        \ "#89B4FA",
+        \ "#F5C2E7",
+        \ "#94E2D5",
+        \ "#A6ADC8",
+        \ ]
+endif
 
 "----------------------------------------------------------------
 " highlighting function                                         |
@@ -227,6 +249,7 @@ call <sid>hi("MoreMsg",       s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("Question",      s:gui0D, "", s:cterm0D, "", "")
 call <sid>hi("Search",        s:gui01, s:gui0A, s:cterm01, s:cterm0A,  "")
 call <sid>hi("Substitute",    s:gui01, s:gui0A, s:cterm01, s:cterm0A, "none")
+call <sid>hi("Substitute",    s:gui01, s:gui0A, s:cterm01, s:cterm0A, "none")
 call <sid>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
 call <sid>hi("TooLong",       s:gui08, "", s:cterm08, "", "")
 call <sid>hi("Underlined",    s:gui08, "", s:cterm08, "", "")
@@ -248,8 +271,8 @@ call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
 call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none")
 call <sid>hi("CursorLineNr",  s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
 call <sid>hi("QuickFixLine",  "", s:gui01, "", s:cterm01, "none")
-call <sid>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
-call <sid>hi("PMenuSel",      s:gui01, s:gui04, s:cterm01, s:cterm04, "")
+call <sid>hi("PMenu",         s:gui05, s:gui01, s:cterm05, s:cterm01, "none")
+call <sid>hi("PMenuSel",      s:gui01, s:gui05, s:cterm01, s:cterm05, "")
 call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
@@ -425,6 +448,11 @@ call <sid>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl")
 call <sid>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl")
 call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl")
 
+" call <sid>hi("SpellBad",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui08)
+" call <sid>hi("SpellLocal",   s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0C)
+" call <sid>hi("SpellCap",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0D)
+" call <sid>hi("SpellRare",    s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0E)
+
 " Startify highlighting
 call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "")
 call <sid>hi("StartifyFile",     s:gui07, "", s:cterm07, "", "")
@@ -440,6 +468,8 @@ call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "")
 " Java highlighting
 call <sid>hi("javaOperator",     s:gui0D, "", s:cterm0D, "", "")
 
+
+
 "--------------------------------------------------------------------
 " Remove functions                                                  |
 "--------------------------------------------------------------------
@@ -452,3 +482,4 @@ delf <sid>cterm
 "--------------------------------------------------------------------
 unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
 unlet s:cterm00 s:cterm01 s:cterm02 s:cterm03 s:cterm04 s:cterm05 s:cterm06 s:cterm07 s:cterm08 s:cterm09 s:cterm0A s:cterm0B s:cterm0C s:cterm0D s:cterm0E s:cterm0F
+
